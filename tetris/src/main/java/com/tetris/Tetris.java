@@ -1,4 +1,4 @@
-package com.Application;
+package com.tetris;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,10 +44,12 @@ public class Tetris extends Application {
 		}
 
 		Line line = new Line(XMAX, 0, XMAX, YMAX);
+		line.setStroke(Color.WHITE);
 		Text scoretext = new Text("Score: ");
 		scoretext.setStyle("-fx-font: 20 arial;");
 		scoretext.setY(50);
 		scoretext.setX(XMAX + 5);
+		scoretext.setFill(Color.WHITE);
 		Text level = new Text("Lines: ");
 		level.setStyle("-fx-font: 20 arial;");
 		level.setY(100);
@@ -63,6 +65,7 @@ public class Tetris extends Application {
 		stage.setScene(scene);
 		stage.setTitle("T E T R I S");
 		stage.show();
+		scene.setFill(Color.BLACK);
 
 		Timer fall = new Timer();
 		TimerTask task = new TimerTask() {
