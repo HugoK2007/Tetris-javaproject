@@ -1,4 +1,4 @@
-package com.Application;
+package com.tetris;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,10 +19,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
-
 public class Tetris extends Application {
-	// The variables
 	public static final int MOVE = 25;
 	public static final int SIZE = 25;
 	public static int XMAX = SIZE * 12;
@@ -36,7 +33,6 @@ public class Tetris extends Application {
 	private static boolean game = true;
 	private static Form nextObj = Controller.makeRect();
 	private static int linesNo = 0;
-	
 
 	public static void main(String[] args) {
 		launch(args);
@@ -49,10 +45,12 @@ public class Tetris extends Application {
 		}
 
 		Line line = new Line(XMAX, 0, XMAX, YMAX);
+		line.setStroke(Color.WHITE);
 		Text scoretext = new Text("Score: ");
 		scoretext.setStyle("-fx-font: 20 arial;");
 		scoretext.setY(50);
 		scoretext.setX(XMAX + 5);
+		scoretext.setFill(Color.WHITE);
 		Text level = new Text("Lines: ");
 		level.setStyle("-fx-font: 20 arial;");
 		level.setY(100);
@@ -66,8 +64,9 @@ public class Tetris extends Application {
 		object = a;
 		nextObj = Controller.makeRect();
 		stage.setScene(scene);
-		stage.setTitle("T E T R I S");
+		stage.setTitle("Tetris");
 		stage.show();
+		scene.setFill(Color.BLACK);
 
 		Timer fall = new Timer();
 		TimerTask task = new TimerTask() {
@@ -81,17 +80,16 @@ public class Tetris extends Application {
 							top = 0;
 
 						if (top == 2) {
-							// GAME OVER
 							TextInputDialog dialog = new TextInputDialog("Player");
-                             dialog.setTitle("Game Over");
-                             dialog.setHeaderText("Game Over");
-                             dialog.setContentText("Enter your name:");
-                             Optional<String> result = dialog.showAndWait();
-
-                             result.ifPresent(name -> {
-                             ScoreManager.saveScore(name, score);
-                              ScoreBoard.showTopScores();
-                                });
+                            dialog.setTitle("Game Over");
+                            dialog.setHeaderText("Game Over");
+                            dialog.setContentText("Enter your name:");
+                            Optional<String> result = dialog.showAndWait();
+ 
+                            result.ifPresent(name -> {
+                            ScoreManager.saveScore(name, score);
+                            ScoreBoard.showTopScores();
+                            });
 							Text over = new Text("GAME OVER");
 							over.setFill(Color.RED);
 							over.setStyle("-fx-font: 70 arial;");
@@ -100,7 +98,7 @@ public class Tetris extends Application {
 							group.getChildren().add(over);
 							game = false;
 						}
-						// Exit
+
 						if (top == 15) {
 							System.exit(0);
 						}
@@ -440,7 +438,6 @@ public class Tetris extends Application {
 			}
 			if (full == MESH.length)
 			lines.add(i);
-			//lines.add(i + lines.size());
 			full = 0;
 		}
 		if (lines.size() > 0)
@@ -567,10 +564,4 @@ public class Tetris extends Application {
 			yb = rect.getY() + y * MOVE < YMAX;
 		return xb && yb && MESH[((int) rect.getX() / SIZE) + x][((int) rect.getY() / SIZE) - y] == 0;
 	}
-
-	
-
-
 }
-
-
