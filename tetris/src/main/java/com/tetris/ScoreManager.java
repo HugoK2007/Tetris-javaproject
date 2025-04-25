@@ -1,4 +1,4 @@
-package com.Application;
+package com.tetris;
 
 import java.io.*;
 import java.util.*;
