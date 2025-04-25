@@ -1,7 +1,8 @@
-package com.tetris;
+package com.Application;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 import javafx.application.Application;
@@ -9,6 +10,7 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -16,6 +18,8 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+
 
 public class Tetris extends Application {
 	// The variables
@@ -32,6 +36,7 @@ public class Tetris extends Application {
 	private static boolean game = true;
 	private static Form nextObj = Controller.makeRect();
 	private static int linesNo = 0;
+	
 
 	public static void main(String[] args) {
 		launch(args);
@@ -44,12 +49,10 @@ public class Tetris extends Application {
 		}
 
 		Line line = new Line(XMAX, 0, XMAX, YMAX);
-		line.setStroke(Color.WHITE);
 		Text scoretext = new Text("Score: ");
 		scoretext.setStyle("-fx-font: 20 arial;");
 		scoretext.setY(50);
 		scoretext.setX(XMAX + 5);
-		scoretext.setFill(Color.WHITE);
 		Text level = new Text("Lines: ");
 		level.setStyle("-fx-font: 20 arial;");
 		level.setY(100);
@@ -65,7 +68,6 @@ public class Tetris extends Application {
 		stage.setScene(scene);
 		stage.setTitle("T E T R I S");
 		stage.show();
-		scene.setFill(Color.BLACK);
 
 		Timer fall = new Timer();
 		TimerTask task = new TimerTask() {
@@ -80,6 +82,16 @@ public class Tetris extends Application {
 
 						if (top == 2) {
 							// GAME OVER
+							TextInputDialog dialog = new TextInputDialog("Player");
+                             dialog.setTitle("Game Over");
+                             dialog.setHeaderText("Game Over");
+                             dialog.setContentText("Enter your name:");
+                             Optional<String> result = dialog.showAndWait();
+
+                             result.ifPresent(name -> {
+                             ScoreManager.saveScore(name, score);
+                              ScoreBoard.showTopScores();
+                                });
 							Text over = new Text("GAME OVER");
 							over.setFill(Color.RED);
 							over.setStyle("-fx-font: 70 arial;");
@@ -556,5 +568,9 @@ public class Tetris extends Application {
 		return xb && yb && MESH[((int) rect.getX() / SIZE) + x][((int) rect.getY() / SIZE) - y] == 0;
 	}
 
+	
+
 
 }
+
+
