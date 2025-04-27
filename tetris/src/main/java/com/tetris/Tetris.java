@@ -31,6 +31,7 @@ public class Tetris extends Application {
 	public static int score = 0;
 	private static int top = 0;
 	private static boolean game = true;
+	private static boolean running = true;
 	private static Form nextObj = Controller.makeRect();
 	private static int linesNo = 0;
 
@@ -43,6 +44,15 @@ public class Tetris extends Application {
 		for (int[] a : MESH) {
 			Arrays.fill(a, 0);
 		}
+		new Thread(() -> {
+            while (running) {
+                try {
+                    Thread.sleep(16);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }).start();
 
 		Line line = new Line(XMAX, 0, XMAX, YMAX);
 		line.setStroke(Color.WHITE);
@@ -91,6 +101,7 @@ public class Tetris extends Application {
                             ScoreBoard.showTopScores();
                             });
 							Text over = new Text("GAME OVER");
+							scene.setFill(Color.BLACK);
 							over.setFill(Color.RED);
 							over.setStyle("-fx-font: 70 arial;");
 							over.setY(250);
@@ -100,7 +111,10 @@ public class Tetris extends Application {
 						}
 
 						if (top == 15) {
-							System.exit(0);
+							stage.setOnCloseRequest(event -> {
+								System.exit(0);
+							});
+							
 						}
 
 						if (game) {
@@ -563,5 +577,11 @@ public class Tetris extends Application {
 		if (y < 0)
 			yb = rect.getY() + y * MOVE < YMAX;
 		return xb && yb && MESH[((int) rect.getX() / SIZE) + x][((int) rect.getY() / SIZE) - y] == 0;
+	}
+
+
+	@Override
+	public void stop() {
+		running = false;
 	}
 }
