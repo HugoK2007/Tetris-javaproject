@@ -1,17 +1,25 @@
 # **Tetris java projekts**
+## Izmantotās programmēšanas valodas
+Šajā projektā tiek izmantota Java un JavaFX.
 ## **Saturs**
 > ### - Tehnoloģijas
 > ### - Spēles noteikumi
 > ### - User Testing
-# **Tehnoloģijas**
-## - javascript
-# **Spēles noteikumi.**
-### - 1. Spēli drīkst spēlēt 1 cilvēks.
-### - 2. Spēle dod 4 figūras, ar kurām jāizpilda 1 līnija, lai pazustu un dotu vietu, t.i turpināt spēli.
-### - 3. Spēle ir bez laika ierobežojuma
-### - 4. Spēle beidzās ar to, kad laukumā beidzās vieta figūrām.
-### -5. Pēc spēles beigšanas spēle jaunā logā parādīs labākos rezultātus
-# **User Testing**
-### - Tika veidots excel formātā
-### https://pikcrvtlv-my.sharepoint.com/:x:/g/personal/a230436hk_rvt_lv/EaXQICxuFK5Kl4IaNMhtW4oBkC7XwB5dJKU9xRo8OxegVw?e=RBljUt
-
+## **Spēles noteikumi**
+- Spēli spēlē 1 cilvēks
+- Figūras sastāv no 4 blokiem un krīt viena pēc otras no ekrāna augšas
+- Spēlētājam jāvirza un jāgriež figūras, lai aizpildītu horizontālas līnijas
+- Kad līnija ir pilnībā aizpildīta ar blokiem, tād tā dzēšas no laukuma
+- Dzēšoties rindām, spēlētājs iegūst punktus un vietu jaunām figūrām
+- Spēle beidzas, ja jaunā figūra vairs nevar parādīties spēles laukuma augšdaļā
+- Mērķis ir izdzīvot pēc iespējas ilgāk un iegūt visaugstāko punktu skaitu
+- Pēc spēles beigšanas, jaunā logā parādīsies labākie rezultāti
+## **Vadība**
+- ( ← ) Labās bultas taustiņš - pārvieto figūru pa labi
+- ( → ) Kreisās bultas taustiņš - pārvieto figūru pa kreisi
+- ( ↑ ) Bulta uz augšu taustiņš - pagriež figūru citā formā
+- ( ↓ ) Bulta uz leju taustiņš - ātrāk nolaiž figūru
+## **Lejupielāde**
+[Download Tetris](https://github.com/HugoK2007/Tetris-javaproject)
+## **User Testing**
+### - Tika veidots excel formātā [(Link)](https://pikcrvtlv-my.sharepoint.com/:x:/g/personal/a230436hk_rvt_lv/EaXQICxuFK5Kl4IaNMhtW4oBkC7XwB5dJKU9xRo8OxegVw?e=RBljUt)
