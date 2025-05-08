@@ -1,10 +1,11 @@
 # **Tetris java projekts**
-## Izmantotās programmēšanas valodas
-Šajā projektā tiek izmantota Java un JavaFX.
 ## **Saturs**
 > ### - Tehnoloģijas
 > ### - Spēles noteikumi
+> ### - Vadība
 > ### - User Testing
+## Izmantotās programmēšanas valodas
+Šajā projektā tiek izmantota Java un JavaFX.
 ## **Spēles noteikumi**
 - Spēli spēlē 1 cilvēks
 - Figūras sastāv no 4 blokiem un krīt viena pēc otras no ekrāna augšas
