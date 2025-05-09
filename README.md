@@ -5,7 +5,7 @@
 > ### - Vadība
 > ### - User Testing
 ## **Izmantotās tehnoloģijas**
-Šajā projektā tiek izmantota Java un JavaFX.
+Šajā projektā tiek izmantota Java, JavaFX un OpenJDK.
 ## **Spēles noteikumi**
 - Spēli spēlē 1 cilvēks
 - Figūras sastāv no 4 blokiem un krīt viena pēc otras no ekrāna augšas
