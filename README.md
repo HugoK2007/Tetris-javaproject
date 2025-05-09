@@ -4,7 +4,7 @@
 > ### - Spēles noteikumi
 > ### - Vadība
 > ### - User Testing
-## Izmantotās programmēšanas valodas
+## **Izmantotās tehnoloģijas**
 Šajā projektā tiek izmantota Java un JavaFX.
 ## **Spēles noteikumi**
 - Spēli spēlē 1 cilvēks
