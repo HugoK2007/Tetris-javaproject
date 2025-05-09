@@ -16,6 +16,10 @@
 - Spēle beidzas, ja jaunā figūra vairs nevar parādīties spēles laukuma augšdaļā
 - Mērķis ir izdzīvot pēc iespējas ilgāk un iegūt visaugstāko punktu skaitu
 - Pēc spēles beigšanas, jaunā logā parādīsies labākie rezultāti
+## **Kā palaist programmu**
+- pirms faila lejupelādes, jābūt ieinstalētam OpenJDK
+- Kad OpenJDK ir ieinstalēts var ielādēt failu
+- Jāatrod klase "Tetris" un jāspiež poga "Run"
 ## **Vadība**
 - ( ← ) Labās bultas taustiņš - pārvieto figūru pa labi
 - ( → ) Kreisās bultas taustiņš - pārvieto figūru pa kreisi
