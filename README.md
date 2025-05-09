@@ -22,7 +22,7 @@
 - ( ↑ ) Bulta uz augšu taustiņš - pagriež figūru citā formā
 - ( ↓ ) Bulta uz leju taustiņš - ātrāk nolaiž figūru
 ## **Lejupielāde**
-> [Download Tetris](https://github.com/HugoK2007/Tetris-javaproject/tree/main/tetris)
-> [OpenJDK](https://openjdk.org/install/)
+- [Download Tetris](https://github.com/HugoK2007/Tetris-javaproject/tree/main/tetris)
+- [OpenJDK](https://openjdk.org/install/)
 ## **Unit Testing**
 - Tika veidots excel formātā [(Link)](https://pikcrvtlv-my.sharepoint.com/:x:/g/personal/a230436hk_rvt_lv/EaXQICxuFK5Kl4IaNMhtW4oBkC7XwB5dJKU9xRo8OxegVw?e=RBljUt)
