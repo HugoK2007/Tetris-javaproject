@@ -23,4 +23,4 @@
 ## **Lejupielāde**
 [Download Tetris](https://github.com/HugoK2007/Tetris-javaproject)
 ## **Unit Testing**
-### - Tika veidots excel formātā [(Link)](https://pikcrvtlv-my.sharepoint.com/:x:/g/personal/a230436hk_rvt_lv/EaXQICxuFK5Kl4IaNMhtW4oBkC7XwB5dJKU9xRo8OxegVw?e=RBljUt)
+- Tika veidots excel formātā [(Link)](https://pikcrvtlv-my.sharepoint.com/:x:/g/personal/a230436hk_rvt_lv/EaXQICxuFK5Kl4IaNMhtW4oBkC7XwB5dJKU9xRo8OxegVw?e=RBljUt)
