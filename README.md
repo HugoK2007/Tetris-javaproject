@@ -3,8 +3,8 @@
 > ### - Tehnoloģijas
 > ### - Spēles noteikumi
 > ### - Vadība
-> ### - Unit
-> Unit Testing
+> ### - Lejupielāde
+> ### - Unit testing
 ## **Izmantotās tehnoloģijas**
 Šajā projektā tiek izmantota Java, JavaFX un OpenJDK.
 ## **Spēles noteikumi**
