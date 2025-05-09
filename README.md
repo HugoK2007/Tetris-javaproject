@@ -2,6 +2,7 @@
 ## **Saturs**
 > ### - Tehnoloģijas
 > ### - Spēles noteikumi
+> ### - Kā palaist programmu
 > ### - Vadība
 > ### - Lejupielāde
 > ### - Unit testing
